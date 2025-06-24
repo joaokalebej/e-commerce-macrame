@@ -5,8 +5,11 @@ namespace Backend.Infrastructure.Data;
 
 public class DBContext : DbContext
 {
-    public DBContext(DbContextOptions<DBContext> options) : base(options) {}
-    public DbSet<Product> Produtos { get; set; }
+    public DBContext(DbContextOptions<DBContext> options) : base(options)
+    {
+        
+    }
+    public DbSet<Product> Product { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
