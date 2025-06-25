@@ -4,6 +4,7 @@
         <TargetFramework>net7.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <LangVersion>12</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>
@@ -25,7 +26,6 @@
       <Folder Include="Application\DTOs\" />
       <Folder Include="Application\Interfaces\" />
       <Folder Include="Application\Services\" />
-      <Folder Include="Infrastructure\Repositories\" />
       <Folder Include="WebAPI\Controllers\" />
       <Folder Include="WebAPI\Middlewares\" />
       <Folder Include="WebAPI\ViewModel\" />
