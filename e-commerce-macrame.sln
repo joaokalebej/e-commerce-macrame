@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backend", "Backend\Backend.csproj", "{8D475979-643C-4AF9-9519-55C59AB358F0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frontend", "Frontend\Frontend.csproj", "{2C205138-0466-462B-A160-ABEFDAE035FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiosEntreNos", "FiosEntreNos\FiosEntreNos.csproj", "{FBF09410-B352-4CA4-BA12-B41EC1A05B74}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,13 +14,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8D475979-643C-4AF9-9519-55C59AB358F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D475979-643C-4AF9-9519-55C59AB358F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D475979-643C-4AF9-9519-55C59AB358F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D475979-643C-4AF9-9519-55C59AB358F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2C205138-0466-462B-A160-ABEFDAE035FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2C205138-0466-462B-A160-ABEFDAE035FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2C205138-0466-462B-A160-ABEFDAE035FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2C205138-0466-462B-A160-ABEFDAE035FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBF09410-B352-4CA4-BA12-B41EC1A05B74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF09410-B352-4CA4-BA12-B41EC1A05B74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF09410-B352-4CA4-BA12-B41EC1A05B74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF09410-B352-4CA4-BA12-B41EC1A05B74}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
