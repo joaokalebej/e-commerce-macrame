@@ -1,0 +1,21 @@
+﻿@model FiosEntreNos.ViewModel.QueryListProduct
+
+<div>
+    <button class="btn btn-default btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+        Ações
+    </button>
+    <div class="dropdown-menu">
+        <a type="button" class='dropdown-item' asp-action="" asp-controller="">Editar
+        </a>
+        @if (Model.Active)
+        {
+            <button type="button" class='dropdown-item'>Desativar
+            </button>
+        }
+        @if (!Model.Active)
+        {
+            <button type="button" class='dropdown-item'>Ativar
+            </button>
+        }
+    </div>
+</div>

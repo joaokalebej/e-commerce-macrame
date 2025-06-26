@@ -1,0 +1,24 @@
+﻿@using NonFactors.Mvc.Grid
+@model List<FiosEntreNos.ViewModel.QueryListProduct>
+
+@(Html
+    .Grid(Model)
+    .Build(columns =>
+    {
+        columns.Add(model => model.Name).Titled("Nome");
+        columns.Add(model => model.Price).Titled("Preço").Formatted("{0:C2}");
+        columns.Add(model => model.Active).Titled("Ativo");
+        columns.Add(model => Html.PartialAsync("_PartialGridProductActions", model).Result).Encoded(false).Css("col-action");
+    })
+    .Empty("Sem dados")
+    .Sortable()
+    .Filterable()
+    .Pageable(pager =>
+    {
+        pager.PageSizes = new Dictionary<int, string> { { 0, "Todos" }, { 50, "50" }, { 100, "100" }, { 200, "200" }, { 500, "500" } };
+        pager.ShowPageSizes = true;
+        pager.PagesToDisplay = 5;
+        pager.CurrentPage = 1;
+        pager.RowsPerPage = 10;
+    })
+)

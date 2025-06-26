@@ -20,4 +20,17 @@ public class ProductService(IProductRepository productRepository) : IProductServ
             throw new Exception(ex.Message);
         }
     }
+    
+    public async Task<IEnumerable<ProductModel>> GetAllProductsAsync()
+    {
+        try
+        {
+            return await productRepository
+                .GetAllProductsAsync();
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
 }

@@ -5,4 +5,5 @@ namespace FiosEntreNos.Services.Interfaces;
 public interface IProductService
 {
     Task<IEnumerable<ProductModel>> GetActivesProductsAsync();
+    Task<IEnumerable<ProductModel>> GetAllProductsAsync();
 }
