@@ -18,6 +18,7 @@ public class HomeController(IProductService productService) : Controller
             Name = s.Name,
             Description = s.Description,
             Price = s.Price,
+            UrlImage = s.ProductImages?.FirstOrDefault()?.ImageUrl ?? ""
         }).ToList();
 
         return View(productViewModel);

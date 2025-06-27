@@ -15,6 +15,7 @@ public class ProductRepository(DBContext context) : IProductRepository
     public async Task<IEnumerable<ProductModel>> GetAllProductsWithStatusAsync(bool active)
     {
         return await context.Product.AsNoTracking()
+            .Include(i => i.ProductImages)
             .Where(w => w.Active == active)
             .ToListAsync();
     }
@@ -45,5 +46,11 @@ public class ProductRepository(DBContext context) : IProductRepository
         await context.Product.Where(w => w.Id == id)
             .ExecuteUpdateAsync(e =>
                 e.SetProperty(s => s.Active, active));
+    }
+
+    public async Task AddImageAsync(ProductImageModel productImage)
+    { 
+        await context.ProductImage.AddAsync(productImage);
+        await context.SaveChangesAsync();
     }
 }

@@ -1,6 +1,10 @@
-﻿using FiosEntreNos.Services.Interfaces;
+﻿using FiosEntreNos.Models;
+using FiosEntreNos.Services.Interfaces;
 using FiosEntreNos.ViewModel;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+
+// ReSharper disable All
 
 namespace FiosEntreNos.Controllers;
 
@@ -10,10 +14,19 @@ public class ProductController(IProductService productService) : Controller
     {
         return View();
     }
-    
+
     public IActionResult Create()
     {
         return View();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create(ProductCreateViewModel model, List<IFormFile> files)
+    {
+        if (ModelState.IsValid)
+            await productService.AddProducts(model, files);
+        
+        return RedirectToAction("Index");
     }
 
     public async Task<IActionResult> GridProducts()
