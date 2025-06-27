@@ -1,7 +1,19 @@
-﻿@model List<FiosEntreNos.ViewModel.QueryListProduct>
-
-@{
+﻿@{
     ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
 }
 
-<partial name="_PartialGridProduct" model="Model"/>
+<div>
+    <a class="btn btn-primary mt-4" type="button" asp-action="Create" asp-controller="Product">
+        <i class="fa fa-plus"></i> Produtos
+    </a>
+</div>
+
+<div class="mt-4" id="grid-all-products"></div>
+
+@section Scripts{
+    <script>
+    let urlGetAllProducts = "@Url.Action("GridProducts", "Product")";
+    </script>
+    <script src="~/js/product.js" asp-append-version="true"></script>
+}

@@ -19,7 +19,7 @@ public class HomeController(IProductService productService) : Controller
             Description = s.Description,
             Price = s.Price,
         }).ToList();
-        
+
         return View(productViewModel);
     }
 }

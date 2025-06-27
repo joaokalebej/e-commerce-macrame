@@ -8,6 +8,16 @@ public class ProductController(IProductService productService) : Controller
 {
     public IActionResult Index()
     {
+        return View();
+    }
+    
+    public IActionResult Create()
+    {
+        return View();
+    }
+
+    public async Task<IActionResult> GridProducts()
+    {
         var products = productService.GetAllProductsAsync();
 
         List<QueryListProduct> query = products.Result.Select(s => new QueryListProduct
@@ -17,7 +27,7 @@ public class ProductController(IProductService productService) : Controller
             Price = s.Price,
             Active = s.Active
         }).ToList();
-        
-        return View(query);
+
+        return PartialView("_PartialGridProduct", query);
     }
 }
