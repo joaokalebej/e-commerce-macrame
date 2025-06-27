@@ -7,6 +7,7 @@ public interface IProductRepository
     Task<IEnumerable<ProductModel>> GetAllProductsAsync();
     Task<IEnumerable<ProductModel>> GetAllProductsWithStatusAsync(bool active);
     Task AddAsync(ProductModel product);
+    Task AddImageAsync(ProductImageModel productImage);
     Task UpdateAsync(ProductModel product);
     Task ActiveAsync(bool active, int id);
 }
